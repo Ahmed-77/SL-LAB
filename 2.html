@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<p id = "demo"></p>
+		<script language = "javascript">
+			var patients = [
+				{
+				"patientName" : "Niraj",
+				"doctorName" : "Dr. Suresh",
+				"diseases":[
+					{"name":"typhoid","symptoms":["Cold","Frequent Fevers"]},
+					{"name":"Cholera","symptoms":["Stomach pain","Vomiting"]}
+					]
+				}
+				,
+				{
+				"patientName": "Suresh",
+				"doctorName":"Dr. Niraj",
+				"diseases":[
+					{"name":"Dengue","symptoms":["High Fever","Redness"]},
+					{"name":"Malaria","symptoms":["Frequent head aches","Burning skin"]}
+				]
+			}
+		]
+			var i,j,x = "";
+			for(i in patients)
+			{
+				x = x + "<h3>Patient Number</h3>" + (Number(i)+1)+")<br>";
+				x = x + "Patient Name:" +patients[i].patientName+"<br>"; 
+				x = x + "Doctor's name:"+patients[i].doctorName+"<br>";
+				x = x + "Diseases:" ;
+				for(j in patients[i].diseases)
+				{
+					x = x + patients[i].diseases[j].name + "<br>";
+					x = x + "Symptoms:" ;
+					x = x + patients[i].diseases[j].symptoms+"<br>";
+				}
+			 }
+			 document.getElementById("demo").innerHTML = x;
+			
+		</script>
+	
+	
+	</body>
+</html>
