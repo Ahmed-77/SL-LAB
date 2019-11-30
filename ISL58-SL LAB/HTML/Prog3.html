@@ -1,0 +1,30 @@
+<!--
+3. The function HourMinute(num) must return the number of hours and minutes the parameter converts
+    to. Separate the number of hours and minutes with a colon.
+    E.g. Input: 126 Output: 2:6
+    E.g. Input: 45 Output: 0:45
+
+-->
+
+
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+        function convertTime(num)
+        {
+            var min=num%60
+            var hrs=Math.floor(num/60)
+            return(hrs+":"+min)
+        }
+    
+        var n=prompt("Enter the time")
+        alert(convertTime(n))
+    </script>
+
+</body>
+</html>

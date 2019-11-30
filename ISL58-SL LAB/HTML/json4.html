@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<p> Access an array value of a JSON object</p>
+<p id="demo"></p>
+<script>
+	var myobj ,i,j, x="";
+	myobj = {
+		details:[
+			{"Patient":"abc","Doctor":"ab","disease":["Fiest","Foc","Must"],"sympton":["vomiting","nausea","fever"]},
+			{"Patient":"def","Doctor":"de","disease":["Fi","Fo","Mu"],"sympton":["headache","viral"]}
+		       ]
+		}
+		for (i in myobj.details) {
+			x+="<h2> Patient Name: " + myobj.details[i].Patient + "</h2>";
+			x+="<h2> Doctor Name: " + myobj.details[i].Doctor + "</h2>";
+			x+="<h2> Diseases </h2>";
+			for(j in myobj.details[i].disease){
+				x+= myobj.details[i].disease[j] + "<br>";
+			}
+			x+="<h2> Sympton </h2>";
+			for(j in myobj.details[i].sympton){
+				x+= myobj.details[i].sympton[j] + "<br>";
+			}
+		}
+	document.getElementById("demo").innerHTML = x;
+</script>
+</body>
+</html> 

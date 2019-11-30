@@ -1,0 +1,34 @@
+<!--
+4. The function AgeConvert(num) needs to calculate the age of a person, given the birth date.
+    E.g. Input: 28-02-1992 Output: 27
+-->
+
+
+<!DOCTYPE html>
+<head>
+    <title>
+        Document
+    </title>
+</head>
+<body>
+
+    <script>
+    
+        function calculate(str)
+        {
+            str=str.split("-")
+            age=2019-Number(str[2])
+
+            if(Number(str[1])>=11 && Number(str[0])>26)
+                age=age-1
+
+            return age
+        }
+    
+    var s=prompt("Enter the Date of Birth")
+    alert(calculate(s))
+
+    </script>
+
+</body>
+</html>
